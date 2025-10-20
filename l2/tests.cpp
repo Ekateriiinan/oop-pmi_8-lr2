@@ -1,16 +1,11 @@
 #include <gtest/gtest.h>
 #include "Twelve.h"
 
-TEST(TwelveTest, DefaultConstructor) {
-    Twelve num;
-    EXPECT_EQ(num.getSize(), 1);
-    EXPECT_EQ(num.getDigit(0), '0');
-}
-
 TEST(TwelveTest, StringConstructor) {
     Twelve num("A1B");
     EXPECT_EQ(num.toString(), "A1B");
 }
+
 
 TEST(TwelveTest, InitializerListConstructor) {
     Twelve num({'1', 'A', '2', 'B'});
@@ -89,4 +84,10 @@ TEST(TwelveTest, EdgeCases) {
     Twelve one("1");
     Twelve result = max.add(one);
     EXPECT_EQ(result.toString(), "1000");
+}
+
+TEST(TwelveTest, DefaultConstructor) {
+    Twelve num;
+    EXPECT_EQ(num.toString(), "0");
+    EXPECT_EQ(num.getSize(), 1);
 }

@@ -1,9 +1,10 @@
-#ifndef TWELVE_H
-#define TWELVE_H
+#pragma once
+
+#include <initializer_list>
+#include <string>
 
 #include "Array.h"
-#include <string>
-#include <initializer_list>
+
 
 class Twelve {
 private:
@@ -38,4 +39,3 @@ public:
     bool greaterThan(const Twelve& other) const;
 };
 
-#endif

@@ -26,8 +26,6 @@ public:
     ~Twelve() noexcept = default;
     
     size_t getSize() const;
-    unsigned char getDigit(size_t index) const;
-    
     void print() const;
     std::string toString() const;
     

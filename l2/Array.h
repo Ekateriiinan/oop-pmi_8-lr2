@@ -17,8 +17,8 @@ public:
     ~Array() noexcept;
     
     size_t getSize() const;
-    unsigned char& at(size_t index);
-    const unsigned char& at(size_t index) const;
+    unsigned char at(size_t index) const;
+    void set(size_t index, unsigned char value);
 };
 
 #endif

@@ -1,5 +1,4 @@
-#ifndef ARRAY_H
-#define ARRAY_H
+#pragma once
 
 #include <cstddef>
 
@@ -21,4 +20,4 @@ public:
     void set(size_t index, unsigned char value);
 };
 
-#endif
+

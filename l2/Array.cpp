@@ -46,16 +46,17 @@ size_t Array::getSize() const {
     return size;
 }
 
-unsigned char& Array::at(size_t index) {
+
+unsigned char Array::at(size_t index) const {
     if (index >= size) {
         throw std::out_of_range("Index out of range");
     }
-    return data[index];
+    return data[index];  
 }
 
-const unsigned char& Array::at(size_t index) const {
+void Array::set(size_t index, unsigned char value) {
     if (index >= size) {
         throw std::out_of_range("Index out of range");
     }
-    return data[index];
+    data[index] = value;
 }

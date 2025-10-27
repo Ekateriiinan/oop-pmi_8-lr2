@@ -1,1 +1,1 @@
-# oop-pmi_8-lr2
+Lab_2 var 10 (OOP)

@@ -1,5 +1,7 @@
 #include <gtest/gtest.h>
+
 #include "Twelve.h"
+
 
 TEST(TwelveTest, DefaultConstructor) {
     Twelve num;
@@ -89,4 +91,5 @@ TEST(TwelveTest, EdgeCases) {
     Twelve one("1");
     Twelve result = max.add(one);
     EXPECT_EQ(result.toString(), "1000");
+
 }

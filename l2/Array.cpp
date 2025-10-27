@@ -1,6 +1,8 @@
 #include "Array.h"
+
 #include <algorithm>
 #include <stdexcept>
+
 
 Array::Array() : size(0), data(nullptr) {}
 
@@ -60,3 +62,4 @@ void Array::set(size_t index, unsigned char value) {
     }
     data[index] = value;
 }
+

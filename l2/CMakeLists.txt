@@ -1,19 +1,22 @@
-cmake_minimum_required(VERSION 3.14)
-project(TwelveSystem)
+cmake_minimum_required(VERSION 3.10)
+project(TwelveProject)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(twelve_system main.cpp Array.cpp Twelve.cpp)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
-include(FetchContent)
-FetchContent_Declare(
-  googletest
-  URL https://github.com/google/googletest/archive/03597a01ee50ed33e9fdab597d271efac4ddfcbd.zip
+add_executable(twelve_program
+    main.cpp
+    Array.cpp
+    Twelve.cpp
 )
-FetchContent_MakeAvailable(googletest)
 
-add_executable(twelve_tests tests.cpp Array.cpp Twelve.cpp)
-target_link_libraries(twelve_tests gtest_main gmock)
+add_executable(twelve_tests
+    tests.cpp
+    Array.cpp
+    Twelve.cpp
+)
 
-include(GoogleTest)
-gtest_discover_tests(twelve_tests)
+target_include_directories(twelve_program PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(twelve_tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
